@@ -1,0 +1,16 @@
+{% extends "user/layout.html" %}
+
+{% block body %}
+
+    <h1>Categories</h1>
+
+    {% for category in categories %}
+    <div>
+        <a href="{% url 'show' category.0 %}">{{ category.1 }}</a>
+    </div>
+    {% endfor %}
+<a href="{% url 'index'   %}"><h5 class="card-header h5">go back</h5></a>
+
+
+
+{% endblock %}
